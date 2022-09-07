@@ -1,25 +1,25 @@
 {
 	"variables": {
-        "client_id": "null",
-        "client_secret": "null",
-        "subscription_id": "null"
+		"client_id": "null",
+		"client_secret": "null",
+		"subscription_id": "null"
 	},
 	"builders": [{
-        "type": "azure-arm",
-        "client_id": "f011b9cc-3682-4528-9e53-b81cd228facc",
-        "client_secret": "E2f8Q~wYevGyD2av0621WNreG5avgRgefhmzudb5",
-        "subscription_id": "f1e57e02-5d37-480c-b1ee-966e73f4cc71",
-        "os_type": "Linux",
-        "image_publisher": "Canonical",
-        "image_offer": "UbuntuServer",
-        "image_sku": "18.04-LTS",
-        "managed_image_resource_group_name": "udacity-Azuredevops",
-        "managed_image_name": "project-1-image",
-        "location": "Southeast Asia",
-        "vm_size": "Standard_D2s_v3",
-        "azure_tags": {
-                "project": "udacity"
-        }
+		"type": "azure-arm",
+		"client_id": "{{user `client_id`}}",
+		"client_secret": "{{user `client_secret`}}",
+		"subscription_id": "{{user `subscription_id`}}",
+		"os_type": "Linux",
+		"image_publisher": "Canonical",
+		"image_offer": "UbuntuServer",
+		"image_sku": "18.04-LTS",
+		"managed_image_resource_group_name": "udacity-Azuredevops",
+		"managed_image_name": "project-1-image",
+		"location": "Southeast Asia",
+		"vm_size": "Standard_D2s_v3",
+		"azure_tags": {
+			"project": "udacity"
+		}
 	}],
 	"provisioners": [{
 		"inline": [
