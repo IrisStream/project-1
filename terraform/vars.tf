@@ -4,7 +4,7 @@ variable "prefix" {
 
 variable "application_port" {
   description = "The application port"
-  default = 80
+  default     = 80
 }
 
 variable "location" {

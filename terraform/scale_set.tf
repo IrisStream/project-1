@@ -30,14 +30,14 @@ resource "azurerm_linux_virtual_machine_scale_set" "example" {
     network_security_group_id = azurerm_network_security_group.example.id
 
     ip_configuration {
-      name                          = "internal"
-      primary                       = true
-      subnet_id                     = azurerm_subnet.example.id
+      name      = "internal"
+      primary   = true
+      subnet_id = azurerm_subnet.example.id
       load_balancer_backend_address_pool_ids = [
         azurerm_lb_backend_address_pool.example.id
       ]
       public_ip_address {
-        name = "PublicIPForInstance"
+        name              = "PublicIPForInstance"
         domain_name_label = var.prefix
       }
     }
