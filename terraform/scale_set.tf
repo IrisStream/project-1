@@ -36,10 +36,11 @@ resource "azurerm_linux_virtual_machine_scale_set" "example" {
       load_balancer_backend_address_pool_ids = [
         azurerm_lb_backend_address_pool.example.id
       ]
-      public_ip_address {
-        name              = "PublicIPForInstance"
-        domain_name_label = var.prefix
-      }
+      # Public ip for testing
+      # public_ip_address {
+      #   name              = "PublicIPForInstance"
+      #   domain_name_label = var.prefix
+      # }
     }
   }
   tags = local.tags

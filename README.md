@@ -17,7 +17,31 @@ For this project, you will write a Packer template and a Terraform template to d
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-**Your words here**
+
+1. Build image with packer
+``` bash
+# create new resource group to store the image 
+az group create -n udacity-azuredevops
+
+# build image
+packer build -var=file=server.var.json sever.json
+```
+
+2. Deploy infrastructure to azure 
+``` bash
+terraform apply -auto-approve
+```
+
+3. Change number of minimun number of instances
+``` bash 
+terraform apply -var minimun_instance=<new_number>
+```
 
 ### Output
-**Your words here**
+1. Policy
+![policy image](images/policy.png)
+
+2. web
+![web image](images/web.png)
+3. URL  
+http://13.76.25.84/
