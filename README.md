@@ -48,4 +48,4 @@ terraform apply -var minimun_instance=<new_number>
 ![web image](images/web.png)
 
 4. URL  
-http://13.76.25.84/
+http://13.76.179.60/
