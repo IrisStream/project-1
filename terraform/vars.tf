@@ -23,7 +23,7 @@ variable "password" {
 
 variable "minimum_instance" {
   description = "The minimun instance of virtual machine scale set"
-  default     = 1
+  default     = 2
 }
 
 variable "maximum_instance" {

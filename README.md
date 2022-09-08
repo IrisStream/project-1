@@ -41,7 +41,11 @@ terraform apply -var minimun_instance=<new_number>
 1. Policy
 ![policy image](images/policy.png)
 
-2. web
+2. Terraform apply
+![Terraform apply](images/terraform_apply.png)
+
+3. web
 ![web image](images/web.png)
-3. URL  
+
+4. URL  
 http://13.76.25.84/
